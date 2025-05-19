@@ -13,6 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+provider "google" {
+  credentials = var.GOOGLE_CREDENTIALS
+}
 
 module "instance_template" {
   source  = "terraform-google-modules/vm/google//modules/instance_template"
