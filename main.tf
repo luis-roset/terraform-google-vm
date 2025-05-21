@@ -25,6 +25,7 @@ module "instance_template" {
   service_account    = var.service_account
   machine_type       = "e2-micro"
   create_service_account = false
+  name                   = var.instance_name
 
 }
 

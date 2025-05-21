@@ -41,6 +41,10 @@ variable "num_instances" {
   description = "Number of instances to create"
 }
 
+variable "instance_name" {
+  description = "Number of instances to create"
+}
+
 variable "nat_ip" {
   description = "Public ip address"
   default     = null
