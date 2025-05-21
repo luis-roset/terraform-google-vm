@@ -25,8 +25,6 @@ module "instance_template" {
   service_account    = var.service_account
   machine_type       = "e2-micro"
   create_service_account = false
-  name                   = var.instance_name
-
 }
 
 module "compute_instance" {
@@ -41,6 +39,7 @@ module "compute_instance" {
   hostname            = "instance-simple"
   instance_template   = module.instance_template.self_link
   deletion_protection = false
+  name                = var.instance_name
 
   access_config = [{
     nat_ip       = var.nat_ip
