@@ -24,6 +24,8 @@ module "instance_template" {
   subnetwork_project = var.project_id
   service_account    = var.service_account
   machine_type       = "e2-micro"
+  create_service_account = false
+
 }
 
 module "compute_instance" {
