@@ -36,10 +36,9 @@ module "compute_instance" {
   subnetwork          = var.subnetwork
   subnetwork_project  = var.project_id
   num_instances       = var.num_instances
-  hostname            = "instance-simple"
+  hostname            = var.instance_name
   instance_template   = module.instance_template.self_link
   deletion_protection = false
-  hostname            = var.instance_name
 
   access_config = [{
     nat_ip       = var.nat_ip
